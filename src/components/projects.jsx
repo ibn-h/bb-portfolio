@@ -35,7 +35,7 @@ const projectsData = [
 
 export const Projects = () => {
   return (
-    <section className="bg-secondary p-16">
+    <section id="projects" className="bg-secondary p-16">
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
         <h2 className="text-text font-bold text-4xl tracking-tight">
           Projects

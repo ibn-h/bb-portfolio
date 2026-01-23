@@ -2,7 +2,10 @@ import webdevImage from "../assets/web-dev.jpg";
 
 export const About = () => {
   return (
-    <section className="grid grid-cols-2 gap-24 p-16 items-center bg-white">
+    <section
+      id="about"
+      className="grid grid-cols-2 gap-24 p-16 items-center bg-white"
+    >
       <div className="flex flex-col gap-4">
         <h2 className="text-4xl font-bold text-black tracking-tight leading-tight">
           Bridging Logic and Design

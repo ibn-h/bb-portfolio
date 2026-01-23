@@ -13,7 +13,10 @@ export const Contact = () => {
   };
 
   return (
-    <section className="grid grid-cols-2 gap-24 p-16 items-center bg-white">
+    <section
+      id="contact"
+      className="grid grid-cols-2 gap-24 p-16 items-center bg-white"
+    >
       <div className="flex flex-col gap-4">
         <h2 className="text-4xl font-bold text-black tracking-tight leading-tight">
           Let’s Work Together
@@ -69,7 +72,7 @@ export const Contact = () => {
           className="btn bg-accent text-base"
           onSubmit={handleSubmit}
         >
-          Contact
+          Send
         </button>
       </form>
     </section>
