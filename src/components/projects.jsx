@@ -31,35 +31,28 @@ const projectsData = [
 
 export const Projects = () => {
   return (
-    <section id="projects" className="bg-secondary px-6 sm:px-8 md:px-16 py-16">
-      <div className="max-w-7xl mx-auto flex flex-col gap-6 sm:gap-10">
-        <h2 className="text-text font-bold  text-3xl sm:text-4xl text-left">
+    <section id="projects" className="bg-secondary px-6 py-16 sm:px-8 md:px-16">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 sm:gap-10">
+        <h2 className="text-text text-left text-3xl font-bold sm:text-4xl">
           Projects
         </h2>
 
-        <div className="flex flex-wrap justify-center md:justify-between gap-8">
-          {projectsData.map(
-            ({ id, link, image, title, Description }) => (
-              <article
-                key={id}
-                className="flex flex-col w-full sm:w-87.5 gap-8"
-              >
-                <a href={link} target="_blank">
-                  <img
-                    className="w-full h-85 object-cover rounded-lg shadow-sm"
-                    alt={title}
-                    src={image}
-                  />
-                </a>
-                <div className="flex flex-col gap-3">
-                  <h3 className="font-medium text-black text-2xl">{title}</h3>
-                    <p>
-                      {Description}
-                    </p>
-                </div>
-              </article>
-            )
-          )}
+        <div className="flex flex-wrap justify-start gap-8 lg:justify-between">
+          {projectsData.map(({ id, link, image, title, Description }) => (
+            <article key={id} className="flex w-full flex-col gap-8 sm:w-87.5">
+              <a href={link} target="_blank">
+                <img
+                  className="h-85 w-full rounded-lg object-cover shadow-sm"
+                  alt={title}
+                  src={image}
+                />
+              </a>
+              <div className="flex flex-col gap-3">
+                <h3 className="text-2xl font-medium text-black">{title}</h3>
+                <p>{Description}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

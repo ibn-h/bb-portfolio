@@ -6,17 +6,19 @@ function Tools() {
   return (
     <section
       id="tools"
-      className="bg-secondary px-6 sm:px-8 md:px-16 py-16 flex items-center justify-center flex-col gap-8"
+      className="bg-secondary flex flex-col items-center justify-center gap-8 px-6 py-16 sm:px-8 md:px-16"
     >
-      <h2 className="text-text font-bold text-4xl tracking-tight">Tools</h2>
-      <div className="grid grid-cols-3 sm:grid-cols-6 items-center justify-center w-full gap-3">
+      <h2 className="text-text text-left text-3xl font-bold tracking-tight sm:text-4xl">
+        Tools
+      </h2>
+      <div className="grid w-full grid-cols-3 items-center justify-center gap-3 sm:grid-cols-6">
         {tools.map((toolName, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center text-center gap-3 w-full"
+            className="flex w-full flex-col items-center justify-center gap-3 text-center"
           >
-            <StackIcon name={toolName} className="w-16 h-16" />
-            <h4 className="text-text lg:text-xl text-lg">{toolName}</h4>
+            <StackIcon name={toolName} className="h-16 w-16" />
+            <h4 className="text-text text-lg lg:text-xl">{toolName}</h4>
           </div>
         ))}
       </div>

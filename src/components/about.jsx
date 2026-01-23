@@ -4,14 +4,14 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="grid sm:grid-cols-2 sm:gap-24 gap-4 px-6 sm:px-8 md:px-16 py-16 items-center bg-white"
+      className="grid items-center gap-4 bg-white px-6 py-16 sm:grid-cols-2 sm:gap-24 sm:px-8 md:px-16"
     >
       <div className="flex flex-col gap-4">
-        <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight leading-tight w-full">
+        <h2 className="w-full text-3xl leading-tight font-bold tracking-tight text-black sm:text-4xl">
           Bridging Logic and Design
         </h2>
 
-        <p className="text-lg text-black leading-relaxed font-normal">
+        <p className="text-lg leading-relaxed font-normal text-black">
           I am a Computer Science student with a passion for building
           applications that work as good as they look. Programming isn't just my
           field of study, it's what I do for fun.
@@ -19,7 +19,7 @@ export const About = () => {
       </div>
 
       <img
-        className="w-full h-auto object-cover rounded-lg"
+        className="h-auto w-full rounded-lg object-cover"
         alt="About Me Illustration"
         src={webdevImage}
       />

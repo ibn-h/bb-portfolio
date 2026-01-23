@@ -9,8 +9,8 @@ export const Header = () => {
     "hover:opacity-70 transition-opacity font-normal text-sm sm:text-base text-text";
 
   return (
-    <header className="flex items-center justify-between px-6 sm:px-8 md:px-16 py-4 bg-secondary">
-      <div className="font-montserrat font-semibold text-black text-xl sm:text-2xl">
+    <header className="bg-secondary relative flex items-center justify-between px-6 py-4 sm:px-8 md:px-16">
+      <div className="font-montserrat text-xl font-semibold text-black sm:text-2xl">
         BB
       </div>
 
