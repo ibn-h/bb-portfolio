@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Header = () => {
   const navigationItems = [
     { label: "Home", href: "/" },
@@ -8,16 +6,14 @@ export const Header = () => {
   ];
 
   const linkStyles =
-    "hover:opacity-70 transition-opacity font-normal text-base text-text";
+    "hover:opacity-70 transition-opacity font-normal text-sm sm:text-base text-text";
 
   return (
-    <header className="flex items-center justify-between px-16 py-4 bg-secondary">
-      {/* Logo */}
-      <div className="font-montserrat font-semibold text-black text-2xl">
+    <header className="flex items-center justify-between px-6 sm:px-8 md:px-16 py-4 bg-secondary">
+      <div className="font-montserrat font-semibold text-black text-xl sm:text-2xl">
         BB
       </div>
 
-      {/* Navigatie */}
       <nav className="flex items-center gap-6" aria-label="Main navigation">
         {navigationItems.map((item) => (
           <a key={item.href} href={item.href} className={linkStyles}>
@@ -25,8 +21,7 @@ export const Header = () => {
           </a>
         ))}
 
-        {/* Contact Button */}
-        <a href="#contact" className="btn bg-accent">
+        <a href="#contact" className="btn bg-accent hidden sm:inline-block">
           Contact
         </a>
       </nav>
