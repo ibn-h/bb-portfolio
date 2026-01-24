@@ -11,7 +11,7 @@ export const Header = () => {
     "hover:opacity-70 transition-opacity font-normal text-base text-text";
 
   return (
-    <header className="flex items-center justify-between px-16 py-4 bg-secondary">
+    <header className="flex items-center justify-between px-8 md:px-16 py-4 bg-secondary">
       {/* Logo */}
       <div className="font-montserrat font-semibold text-black text-2xl">
         BB
@@ -26,7 +26,7 @@ export const Header = () => {
         ))}
 
         {/* Contact Button */}
-        <a href="#contact" className="btn bg-accent">
+        <a href="#contact" className="hidden sm:block btn bg-accent">
           Contact
         </a>
       </nav>

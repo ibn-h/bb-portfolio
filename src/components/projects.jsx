@@ -36,7 +36,7 @@ const projectsData = [
 export const Projects = () => {
   return (
     <section id="projects" className="bg-secondary p-16">
-      <div className="max-w-7xl mx-auto flex flex-col gap-12">
+      <div className="max-w-7xl mx-auto flex flex-col gap-10">
         <h2 className="text-text font-bold text-4xl tracking-tight">
           Projects
         </h2>
