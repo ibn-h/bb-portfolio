@@ -1,15 +1,27 @@
-import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export const Contact = () => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [request, setRequest] = useState("");
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(
-      `Form submitted with following information: ${email}, ${name}, ${request}`,
-    );
+    console.log("Submit attempt");
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, event.target, {
+        publicKey: PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log("Success!");
+          event.target.reset();
+        },
+        (error) => {
+          console.log("Failed...", error.text);
+        },
+      );
   };
 
   return (
@@ -30,7 +42,10 @@ export const Contact = () => {
         </p>
       </div>
 
-      <form className="flex flex-col items-start justify-center gap-6">
+      <form
+        className="flex flex-col items-start justify-center gap-6"
+        onSubmit={handleSubmit}
+      >
         <div className="flex w-full flex-col">
           <label htmlFor="email-field" className="font-medium">
             E-mail
@@ -40,8 +55,8 @@ export const Contact = () => {
             id="email-field"
             placeholder="john.doe@gmail.com"
             className="mt-2 rounded-xl bg-gray-100 p-4"
-            onChange={(e) => setEmail(e.target.value)}
             required
+            name="email"
           />
 
           <label htmlFor="name-field" className="mt-4 font-medium">
@@ -52,8 +67,8 @@ export const Contact = () => {
             id="name-field"
             placeholder="John Doe"
             className="mt-2 rounded-xl bg-gray-100 p-4"
-            onChange={(e) => setName(e.target.value)}
             required
+            name="user_name"
           />
 
           <label htmlFor="request-field" className="mt-4 font-medium">
@@ -63,15 +78,11 @@ export const Contact = () => {
             id="request-field"
             className="mt-2 max-h-50 min-h-25 rounded-xl bg-gray-100 p-4"
             placeholder="Type here..."
-            onChange={(e) => setRequest(e.target.value)}
             required
+            name="message"
           ></textarea>
         </div>
-        <button
-          type="submit"
-          className="btn bg-accent text-base"
-          onSubmit={handleSubmit}
-        >
+        <button type="submit" className="btn bg-accent text-base">
           Send
         </button>
       </form>
