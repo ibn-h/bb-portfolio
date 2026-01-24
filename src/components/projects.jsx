@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "../utils/motion";
+
 import bronzePlanetImg from "../assets/bronze-planet.png";
 import snakeGameImg from "../assets/snake-game.png";
 import podiaImg from "../assets/podia.png";
@@ -17,7 +20,7 @@ const projectsData = [
     image: bronzePlanetImg,
     title: "Bronze Planet",
     Description:
-      "This project served as a playground for my web design skills. I prioritized responsive architecture, ensuring that the 'Bronze Planet' concept provides a seamless experience across all devices.",
+      "This project served as a playground for my web design skills. I prioritized responsive architecture.",
   },
   {
     id: 3,
@@ -25,24 +28,62 @@ const projectsData = [
     image: podiaImg,
     title: "Podia (Frontend Practice)",
     Description:
-      "Using Framer, I focused on high-fidelity details. This project features unique hover effects and custom states, resulting in a fully responsive design that maintains its integrity across all screen sizes.",
+      "Using Framer, I focused on high-fidelity details. This project features unique hover effects.",
   },
 ];
 
-export const Projects = () => {
+const Projects = () => {
+  const projectsVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Time between each project card appearing
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <section id="projects" className="bg-secondary px-6 py-16 sm:px-8 md:px-16">
-      <div className="mx-auto flex max-w-7xl flex-col gap-6 sm:gap-10">
-        <h2 className="text-text text-left text-3xl font-bold sm:text-4xl">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="mx-auto flex max-w-7xl flex-col gap-6 sm:gap-10"
+      >
+        <motion.h2
+          variants={itemVariants}
+          className="text-text text-left text-3xl font-bold sm:text-4xl"
+        >
           Projects
-        </h2>
+        </motion.h2>
 
-        <div className="flex flex-wrap justify-start gap-8 lg:justify-between">
+        <motion.div
+          className="flex flex-wrap justify-start gap-8 lg:justify-between"
+          variants={projectsVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }} // Starts when 10% of the grid is visible
+        >
           {projectsData.map(({ id, link, image, title, Description }) => (
-            <article key={id} className="flex w-full flex-col gap-8 sm:w-87.5">
-              <a href={link} target="_blank">
+            <motion.article
+              key={id}
+              variants={cardVariants}
+              className="flex w-full flex-col gap-8 sm:w-87.5"
+            >
+              <a href={link} target="_blank" rel="noopener noreferrer">
                 <img
-                  className="h-85 w-full rounded-lg object-cover shadow-sm"
+                  className="h-85 w-full rounded-lg object-cover shadow-sm transition-transform duration-300 hover:scale-105"
                   alt={title}
                   src={image}
                 />
@@ -51,10 +92,10 @@ export const Projects = () => {
                 <h3 className="text-2xl font-medium text-black">{title}</h3>
                 <p>{Description}</p>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

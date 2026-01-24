@@ -1,4 +1,4 @@
-export const Header = () => {
+const Header = () => {
   const navigationItems = [
     { label: "Home", href: "/" },
     { label: "About", href: "#about" },
@@ -21,7 +21,11 @@ export const Header = () => {
           </a>
         ))}
 
-        <a href="#contact" className="btn bg-accent hidden sm:inline-block">
+        <a
+          href="#contact"
+          className="btn bg-accent hidden sm:inline-block"
+          aria-label="Contact Me"
+        >
           Contact
         </a>
       </nav>

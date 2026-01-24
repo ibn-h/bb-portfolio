@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "../utils/motion";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -7,7 +9,6 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 export const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submit attempt");
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, event.target, {
@@ -25,24 +26,36 @@ export const Contact = () => {
   };
 
   return (
-    <section
+    <motion.section
       id="contact"
       className="grid items-center gap-10 bg-white px-6 py-16 sm:grid-cols-2 sm:gap-24 sm:px-8 md:px-16"
+      // Apply the container trigger
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
     >
       <div className="flex flex-col gap-4">
-        <h2 className="text-3xl leading-tight font-bold tracking-tight text-black sm:text-4xl">
+        <motion.h2
+          variants={itemVariants}
+          className="text-3xl leading-tight font-bold tracking-tight text-black sm:text-4xl"
+        >
           Let’s Work Together
-        </h2>
+        </motion.h2>
 
-        <p className="text-lg leading-relaxed font-normal text-black">
+        <motion.p
+          variants={itemVariants}
+          className="text-lg leading-relaxed font-normal text-black"
+        >
           Are you looking for a dedicated Web Developer or Designer for your
           next project? I am currently available for freelance opportunities. I
           am based in Antwerp UTC+2. I am highly responsive and can adapt to
           your timeline to ensure a smooth collaboration.
-        </p>
+        </motion.p>
       </div>
 
-      <form
+      <motion.form
+        variants={itemVariants} // The whole form slides in as one unit after the text
         className="flex flex-col items-start justify-center gap-6"
         onSubmit={handleSubmit}
       >
@@ -54,7 +67,7 @@ export const Contact = () => {
             type="email"
             id="email-field"
             placeholder="john.doe@gmail.com"
-            className="mt-2 rounded-2xl bg-gray-200 p-4"
+            className="focus:ring-accent mt-2 rounded-2xl bg-gray-200 p-4 outline-none focus:ring-2"
             required
             name="email"
           />
@@ -66,27 +79,33 @@ export const Contact = () => {
             type="text"
             id="name-field"
             placeholder="John Doe"
-            className="mt-2 rounded-2xl bg-gray-200 p-4"
+            className="focus:ring-accent mt-2 rounded-2xl bg-gray-200 p-4 outline-none focus:ring-2"
             required
             name="user_name"
           />
 
-          <label htmlFor="request-field" className="mt-4 font-medium">
-            Request
+          <label htmlFor="message-field" className="mt-4 font-medium">
+            Message
           </label>
           <textarea
-            id="Type here..."
-            className="mt-2 max-h-50 min-h-25 rounded-2xl bg-gray-200 p-4"
-            placeholder="Website with 3 pages's and database integration"
+            id="message-field"
+            className="focus:ring-accent mt-2 max-h-50 min-h-25 rounded-2xl bg-gray-200 p-4 outline-none focus:ring-2"
+            placeholder="Type your message here..."
             required
             name="message"
           ></textarea>
         </div>
-        <button type="submit" className="btn bg-accent text-base">
+
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          type="submit"
+          className="btn bg-accent text-base"
+        >
           Send
-        </button>
-      </form>
-    </section>
+        </motion.button>
+      </motion.form>
+    </motion.section>
   );
 };
 

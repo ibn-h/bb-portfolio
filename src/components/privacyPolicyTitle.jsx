@@ -6,7 +6,7 @@ const PrivacyPolicyTitle = () => {
       </h1>
 
       <div className="flex w-full flex-col items-start gap-2 md:items-center">
-        <span className="test-base text-paragraph leading-relaxed font-semibold sm:text-lg">
+        <span className="text-paragraph text-base leading-relaxed font-semibold sm:text-lg">
           Last updated: January 12, 2026
         </span>
 
