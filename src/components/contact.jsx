@@ -54,7 +54,8 @@ export const Contact = () => {
             type="email"
             id="email-field"
             placeholder="john.doe@gmail.com"
-            className="mt-2 rounded-xl bg-gray-100 p-4"
+            className="bg-gray-200 p-4 mt-2 rounded-[20px]"
+            onChange={(e) => setEmail(e.target.value)}
             required
             name="email"
           />
@@ -66,7 +67,8 @@ export const Contact = () => {
             type="text"
             id="name-field"
             placeholder="John Doe"
-            className="mt-2 rounded-xl bg-gray-100 p-4"
+            className="bg-gray-200 p-4 mt-2 rounded-[20px]"
+            onChange={(e) => setName(e.target.value)}
             required
             name="user_name"
           />
@@ -75,9 +77,10 @@ export const Contact = () => {
             Request
           </label>
           <textarea
-            id="request-field"
-            className="mt-2 max-h-50 min-h-25 rounded-xl bg-gray-100 p-4"
-            placeholder="Type here..."
+            id="Type here..."
+            className="bg-gray-200 p-4 max-h-50 min-h-25 mt-2 rounded-[20px]"
+            placeholder="Website with 3 pages's and database integration"
+            onChange={(e) => setRequest(e.target.value)}
             required
             name="message"
           ></textarea>
