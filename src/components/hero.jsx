@@ -4,16 +4,16 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="bg-white py-20 px-6 sm:px-8 md:px-16 md:py-30"
+      className="bg-white px-6 py-20 sm:px-8 md:px-16 md:py-30"
     >
-      <div className="mx-auto flex max-w-225 flex-col items-center justify-center text-center gap-8">
+      <div className="mx-auto flex max-w-225 flex-col items-center justify-center gap-8 text-center">
         {/* Heading */}
-        <h1 className="text-text font-h-1 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+        <h1 className="text-text font-h-1 text-4xl font-bold tracking-tight md:text-5xl">
           Crafting Seamless Web Experiences from Antwerp
         </h1>
 
         {/* Paragraph */}
-        <p className="text-paragraph text-lg max-w-200">
+        <p className="text-paragraph max-w-200 text-lg">
           My name is Badr Belarbi. I am a Web Developer with 2 years of
           experience building functional and aesthetic web applications.
         </p>

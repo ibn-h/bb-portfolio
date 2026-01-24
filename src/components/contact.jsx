@@ -54,7 +54,7 @@ export const Contact = () => {
             type="email"
             id="email-field"
             placeholder="john.doe@gmail.com"
-            className="mt-2 rounded-[20px] bg-gray-200 p-4"
+            className="mt-2 rounded-2xl bg-gray-200 p-4"
             required
             name="email"
           />
@@ -66,7 +66,7 @@ export const Contact = () => {
             type="text"
             id="name-field"
             placeholder="John Doe"
-            className="mt-2 rounded-[20px] bg-gray-200 p-4"
+            className="mt-2 rounded-2xl bg-gray-200 p-4"
             required
             name="user_name"
           />
@@ -76,7 +76,7 @@ export const Contact = () => {
           </label>
           <textarea
             id="Type here..."
-            className="mt-2 max-h-50 min-h-25 rounded-[20px] bg-gray-200 p-4"
+            className="mt-2 max-h-50 min-h-25 rounded-2xl bg-gray-200 p-4"
             placeholder="Website with 3 pages's and database integration"
             required
             name="message"
