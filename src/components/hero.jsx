@@ -1,11 +1,13 @@
 import { motion } from "motion/react";
 import { containerVariants, itemVariants } from "../utils/motion";
 
+import heroSVG from "../assets/hero-code-snippet.svg";
+
 const Hero = () => {
   return (
     <section
       id="hero"
-      className="flex min-h-screen items-center justify-center bg-white px-6 py-20 sm:px-8 md:px-16 md:py-30"
+      className="grid min-h-screen items-center justify-center bg-white px-6 py-20 sm:px-8 md:px-16 md:py-30"
     >
       <motion.div
         variants={containerVariants}
@@ -44,6 +46,8 @@ const Hero = () => {
           </a>
         </motion.div>
       </motion.div>
+
+      <img src={heroSVG} alt="React code snippet" />
     </section>
   );
 };
