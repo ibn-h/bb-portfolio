@@ -11,7 +11,7 @@ export const About = () => {
           Bridging Logic and Design
         </h2>
 
-        <p className="text-lg leading-relaxed font-normal text-black">
+        <p className="max-w-187.5 text-lg leading-relaxed font-normal text-black">
           I am a Computer Science student with a passion for building
           applications that work as good as they look. Programming isn't just my
           field of study, it's what I do for fun.

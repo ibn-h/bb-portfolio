@@ -17,7 +17,7 @@ const projectsData = [
     image: bronzePlanetImg,
     title: "Bronze Planet",
     Description:
-      "This project served as a playground for my web design skills. I prioritized accessibility and responsive architecture, ensuring that the 'Bronze Planet' concept is inclusive for every type of user.",
+      "This project served as a playground for my web design skills. I prioritized responsive architecture, ensuring that the 'Bronze Planet' concept provides a seamless experience across all devices.",
   },
   {
     id: 3,
