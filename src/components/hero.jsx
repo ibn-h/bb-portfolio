@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../utils/motion";
 
 const badgePulse = {
@@ -65,21 +64,21 @@ const Hero = () => {
           variants={itemVariants}
           className="flex justify-center gap-4"
         >
-          <Link
-            to="projects"
+          <a
+            href="#projects"
             className="btn btn-padding bg-secondary"
             aria-label="View Projects"
           >
             View Projects
-          </Link>
+          </a>
 
-          <Link
-            to="contact"
+          <a
+            href="#contact"
             className="btn btn-padding bg-accent"
             aria-label="Contact Me"
           >
             Contact Me
-          </Link>
+          </a>
         </motion.div>
 
         <motion.div

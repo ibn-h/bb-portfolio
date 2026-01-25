@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
-
 const Header = () => {
   const navigationItems = [
     { label: "Home", href: "/" },
-    { label: "Projects", href: "projects" },
-    { label: "About", href: "about" },
+    { label: "Projects", href: "#projects" },
+    { label: "About", href: "#about" },
   ];
 
   const linkStyles =
@@ -21,18 +19,18 @@ const Header = () => {
         aria-label="Main navigation"
       >
         {navigationItems.map((item) => (
-          <Link key={item.href} to={item.href} className={linkStyles}>
+          <a key={item.href} href={item.href} className={linkStyles}>
             {item.label}
-          </Link>
+          </a>
         ))}
 
-        <Link
-          to="contact"
+        <a
+          href="#contact"
           className="btn sm:bg-accent sm:inline-block"
           aria-label="Contact Me"
         >
           Contact
-        </Link>
+        </a>
       </nav>
     </header>
   );
