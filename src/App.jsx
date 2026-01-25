@@ -14,7 +14,6 @@ import PrivacyPolicy from "./pages/privacyPolicy";
 function App() {
   return (
     <Router>
-      <ScrollToTop />
       <Header />
       <Routes>
         <Route

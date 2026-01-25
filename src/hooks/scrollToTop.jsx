@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
+  console.log("test");
+
   useEffect(() => {
     // This tells the browser to snap to the top-left corner
     window.scrollTo(0, 0);
