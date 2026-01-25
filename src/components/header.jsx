@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const navigationItems = [
     { label: "Home", href: "/" },
-    { label: "Projects", href: "#projects" },
-    { label: "About", href: "#about" },
+    { label: "Projects", href: "projects" },
+    { label: "About", href: "about" },
   ];
 
   const linkStyles =
@@ -27,7 +27,7 @@ const Header = () => {
         ))}
 
         <Link
-          to="#contact"
+          to="contact"
           className="btn sm:bg-accent sm:inline-block"
           aria-label="Contact Me"
         >

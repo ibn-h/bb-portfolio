@@ -66,7 +66,7 @@ const Hero = () => {
           className="flex justify-center gap-4"
         >
           <Link
-            to="#projects"
+            to="projects"
             className="btn btn-padding bg-secondary"
             aria-label="View Projects"
           >
@@ -74,7 +74,7 @@ const Hero = () => {
           </Link>
 
           <Link
-            to="#contact"
+            to="contact"
             className="btn btn-padding bg-accent"
             aria-label="Contact Me"
           >
