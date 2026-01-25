@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { containerVariants, itemVariants } from "../utils/motion";
+import useHashScroll from "../hooks/useHashScroll";
 
 const badgePulse = {
   scale: [1, 1.4, 1],
@@ -14,6 +16,8 @@ const textFlicker = {
 };
 
 const Hero = () => {
+  useHashScroll();
+
   return (
     <section
       id="hero"
@@ -65,7 +69,7 @@ const Hero = () => {
           className="flex justify-center gap-4"
         >
           <a
-            href="#projects"
+            href="#/#projects"
             className="btn btn-padding bg-secondary"
             aria-label="View Projects"
           >
@@ -73,7 +77,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="#contact"
+            href="#/#contact"
             className="btn btn-padding bg-accent"
             aria-label="Contact Me"
           >

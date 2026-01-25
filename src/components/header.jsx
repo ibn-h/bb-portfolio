@@ -1,9 +1,15 @@
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import useHashScroll from "../hooks/useHashScroll";
+
+const navigationItems = [
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "#/#projects" },
+  { label: "About", href: "#/#about" },
+];
+
 const Header = () => {
-  const navigationItems = [
-    { label: "Home", href: "/" },
-    { label: "Projects", href: "#projects" },
-    { label: "About", href: "#about" },
-  ];
+  useHashScroll();
 
   const linkStyles =
     "hover:opacity-70 transition-opacity font-normal text-sm sm:text-base text-text";
@@ -25,7 +31,7 @@ const Header = () => {
         ))}
 
         <a
-          href="#contact"
+          href="#/#contact"
           className="btn sm:bg-accent sm:inline-block"
           aria-label="Contact Me"
         >
