@@ -1,4 +1,5 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./hooks/scrollToTop";
 
 import Header from "./components/header";
 import Hero from "./components/hero";
@@ -13,6 +14,7 @@ import PrivacyPolicy from "./pages/privacyPolicy";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route
