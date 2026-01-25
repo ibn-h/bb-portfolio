@@ -24,7 +24,7 @@ const Header = () => {
         className="flex items-center gap-3 sm:gap-6"
         aria-label="Main navigation"
       >
-        <Link to="#/" className={linkStyles}>
+        <Link to="/" className={linkStyles}>
           Home
         </Link>
 
