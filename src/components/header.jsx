@@ -1,4 +1,6 @@
 import useHashScroll from "../hooks/useHashScroll";
+import scrollToTop from "../hooks/scrollToTop";
+import { div } from "motion/react-client";
 
 const navigationItems = [
   { label: "Home", href: "#/" },
@@ -8,6 +10,7 @@ const navigationItems = [
 
 const Header = () => {
   useHashScroll();
+  scrollToTop();
 
   const linkStyles =
     "hover:opacity-70 transition-opacity font-normal text-sm sm:text-base text-text";
@@ -22,11 +25,17 @@ const Header = () => {
         className="flex items-center gap-3 sm:gap-6"
         aria-label="Main navigation"
       >
-        {navigationItems.map((item) => (
-          <a key={item.href} href={item.href} className={linkStyles}>
-            {item.label}
-          </a>
-        ))}
+        {navigationItems.map((item) =>
+          item.href.startsWith("#/") ? (
+            <a key={item.href} href={item.href} className={linkStyles}>
+              {item.label}
+            </a>
+          ) : (
+            <Link to={item.href} key={item.href} className={linkStyles}>
+              {item.label}
+            </Link>
+          ),
+        )}
 
         <a
           href="#/#contact"
