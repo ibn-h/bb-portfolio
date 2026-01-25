@@ -12,7 +12,7 @@ import PrivacyPolicy from "./pages/privacyPolicy";
 
 function App() {
   return (
-    <Router className="">
+    <Router>
       <Header />
       <Routes>
         <Route
