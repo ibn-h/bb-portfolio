@@ -89,11 +89,7 @@ const Hero = () => {
           variants={itemVariants}
           className="text-primary flex items-center justify-center gap-3"
         >
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/badr-b-40b1b6351/?locale=en_US"
-          >
+          <a href="https://www.linkedin.com/in/badr-b-40b1b6351/?locale=en_US">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
