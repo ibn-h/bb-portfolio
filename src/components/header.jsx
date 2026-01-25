@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import useHashScroll from "../hooks/useHashScroll";
 import scrollToTop from "../hooks/scrollToTop";
-import { div } from "motion/react-client";
 
 const navigationItems = [
-  { label: "Home", href: "#/" },
+  { label: "Home", href: "/" },
   { label: "Projects", href: "#/#projects" },
   { label: "About", href: "#/#about" },
 ];
