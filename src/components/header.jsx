@@ -3,7 +3,7 @@ import useHashScroll from "../hooks/useHashScroll";
 import scrollToTop from "../hooks/scrollToTop";
 
 const navigationItems = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "#/" },
   { label: "Projects", href: "#/#projects" },
   { label: "About", href: "#/#about" },
 ];
