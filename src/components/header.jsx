@@ -3,7 +3,6 @@ import useHashScroll from "../hooks/useHashScroll";
 import scrollToTop from "../hooks/scrollToTop";
 
 const navigationItems = [
-  { label: "Home", href: "#/" },
   { label: "Projects", href: "#/#projects" },
   { label: "About", href: "#/#about" },
 ];
@@ -25,17 +24,15 @@ const Header = () => {
         className="flex items-center gap-3 sm:gap-6"
         aria-label="Main navigation"
       >
-        {navigationItems.map((item) =>
-          item.href.startsWith("#/") ? (
-            <a key={item.href} href={item.href} className={linkStyles}>
-              {item.label}
-            </a>
-          ) : (
-            <Link to={item.href} key={item.href} className={linkStyles}>
-              {item.label}
-            </Link>
-          ),
-        )}
+        <Link to="#/" className={linkStyles}>
+          Home
+        </Link>
+
+        {navigationItems.map((item) => (
+          <a key={item.href} href={item.href} className={linkStyles}>
+            {item.label}
+          </a>
+        ))}
 
         <a
           href="#/#contact"
