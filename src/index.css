@@ -40,5 +40,9 @@ p {
 }
 
 .btn {
-  @apply text-text cursor-pointer rounded-3xl px-6 py-3 font-medium transition-opacity hover:opacity-90;
+  @apply text-text cursor-pointer rounded-3xl p-[none] text-sm transition-opacity hover:opacity-90 sm:px-6 sm:py-3 sm:text-base sm:font-medium;
+}
+
+.btn-padding {
+  @apply px-6 py-3;
 }

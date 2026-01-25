@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { containerVariants, itemVariants } from "../utils/motion";
+import { itemVariants } from "../utils/motion";
 
 import bronzePlanetImg from "../assets/bronze-planet.png";
 import snakeGameImg from "../assets/snake-game.png";
@@ -33,7 +33,7 @@ const projectsData = [
 ];
 
 const Projects = () => {
-  const projectsVariants = {
+  const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -53,7 +53,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="bg-secondary px-6 py-16 sm:px-8 md:px-16">
+    <section id="projects" className="bg-secondary px-8 py-16 sm:px-16">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -68,33 +68,29 @@ const Projects = () => {
           Projects
         </motion.h2>
 
-        <motion.div
-          className="flex flex-wrap justify-start gap-8 lg:justify-between"
-          variants={projectsVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }} // Starts when 10% of the grid is visible
-        >
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {projectsData.map(({ id, link, image, title, Description }) => (
             <motion.article
               key={id}
               variants={cardVariants}
-              className="flex w-full flex-col gap-8 sm:w-87.5"
+              className="flex flex-col gap-4 sm:gap-6"
             >
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <img
-                  className="h-85 w-full rounded-lg object-cover shadow-sm transition-transform duration-300 hover:scale-105"
+                  className="aspect-video w-full rounded-lg object-cover shadow-sm transition-transform duration-300 hover:scale-105"
                   alt={title}
                   src={image}
                 />
               </a>
-              <div className="flex flex-col gap-3">
-                <h3 className="text-2xl font-medium text-black">{title}</h3>
+              <div className="flex flex-col gap-2 sm:gap-3">
+                <h3 className="text-xl font-medium text-black sm:text-2xl">
+                  {title}
+                </h3>
                 <p>{Description}</p>
               </div>
             </motion.article>
           ))}
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   );

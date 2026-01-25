@@ -1,8 +1,8 @@
 const Header = () => {
   const navigationItems = [
     { label: "Home", href: "/" },
-    { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
+    { label: "About", href: "#about" },
   ];
 
   const linkStyles =
@@ -14,7 +14,10 @@ const Header = () => {
         BB
       </div>
 
-      <nav className="flex items-center gap-6" aria-label="Main navigation">
+      <nav
+        className="flex items-center gap-3 sm:gap-6"
+        aria-label="Main navigation"
+      >
         {navigationItems.map((item) => (
           <a key={item.href} href={item.href} className={linkStyles}>
             {item.label}
@@ -23,7 +26,7 @@ const Header = () => {
 
         <a
           href="#contact"
-          className="btn bg-accent hidden sm:inline-block"
+          className="btn sm:bg-accent sm:inline-block"
           aria-label="Contact Me"
         >
           Contact

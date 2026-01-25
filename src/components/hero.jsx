@@ -1,8 +1,6 @@
 import { motion } from "motion/react";
 import { containerVariants, itemVariants } from "../utils/motion";
 
-import heroSVG from "../assets/hero-code-snippet.svg";
-
 const badgePulse = {
   scale: [1, 1.4, 1],
   opacity: [0.5, 0.15, 0.5],
@@ -68,14 +66,18 @@ const Hero = () => {
         >
           <a
             href="#projects"
-            className="btn bg-secondary"
+            className="btn btn-padding bg-secondary"
             aria-label="View Projects"
             target=""
           >
             View Projects
           </a>
 
-          <a href="#contact" className="btn bg-accent" aria-label="Contact Me">
+          <a
+            href="#contact"
+            className="btn btn-padding bg-accent"
+            aria-label="Contact Me"
+          >
             Contact Me
           </a>
         </motion.div>

@@ -100,7 +100,7 @@ export const Contact = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           type="submit"
-          className="btn bg-accent text-base"
+          className="btn btn-padding bg-accent text-base"
         >
           Send
         </motion.button>
