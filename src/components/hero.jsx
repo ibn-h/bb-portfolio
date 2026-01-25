@@ -5,7 +5,7 @@ import heroSVG from "../assets/hero-code-snippet.svg";
 
 const badgePulse = {
   scale: [1, 1.4, 1],
-  opacity: [0.5, 0, 0.5],
+  opacity: [0.5, 0.15, 0.5],
   duration: 2,
 };
 
