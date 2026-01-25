@@ -79,7 +79,10 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        <motion.div className="text-primary flex items-center justify-center gap-3">
+        <motion.div
+          variants={itemVariants}
+          className="text-primary flex items-center justify-center gap-3"
+        >
           <a href="https://www.linkedin.com/in/badr-b-40b1b6351/?locale=en_US">
             <svg
               xmlns="http://www.w3.org/2000/svg"

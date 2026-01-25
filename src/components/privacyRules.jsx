@@ -47,7 +47,7 @@ const PrivacyRules = () => {
     {
       title: "4. Third-Party Services",
       content:
-        "This website is built using Tailwind CSS and Vite. Depending on the hosting provider (e.g., Vercel, Netlify) or form-handling service used, some technical data (like IP addresses) may be logged for security and analytical purposes by these providers. I encourage you to check their respective privacy policies.",
+        "This website is built using Tailwind CSS and Vite. Since the site is hosted on GitHub Pages, some technical data (such as IP addresses) may be logged by GitHub for security, maintenance, and analytical purposes. I encourage you to check GitHub's Privacy Statement for more detailed information on how they handle this data.",
     },
     {
       title: "5. Your Rights",
@@ -73,10 +73,10 @@ const PrivacyRules = () => {
       <div className="w-full max-w-4xl space-y-12">
         {sections.map((section, index) => (
           <div key={index} className="flex flex-col gap-4">
-            <h2 className="font-montserrat text-3xl leading-[0.9] font-medium text-black md:text-4xl">
+            <h2 className="text-3xl leading-[0.9] font-medium text-black md:text-4xl">
               {section.title}
             </h2>
-            <div className="font-montserrat text-paragraph text-base leading-relaxed sm:text-lg">
+            <div className="text-paragraph text-base leading-relaxed sm:text-lg">
               {section.content}
             </div>
           </div>
