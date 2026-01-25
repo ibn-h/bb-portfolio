@@ -70,6 +70,7 @@ const Hero = () => {
             href="#projects"
             className="btn bg-secondary"
             aria-label="View Projects"
+            target=""
           >
             View Projects
           </a>
@@ -83,7 +84,11 @@ const Hero = () => {
           variants={itemVariants}
           className="text-primary flex items-center justify-center gap-3"
         >
-          <a href="https://www.linkedin.com/in/badr-b-40b1b6351/?locale=en_US">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/badr-b-40b1b6351/?locale=en_US"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -98,7 +103,11 @@ const Hero = () => {
             </svg>
           </a>
 
-          <a href="https://github.com/ibn-h">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/ibn-h"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
