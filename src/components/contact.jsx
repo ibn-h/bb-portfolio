@@ -98,7 +98,7 @@ export const Contact = () => {
 
         <p className="max-w-150 text-sm">
           Upwork visitors: Please contact me via the Upwork platform to comply
-          with Terms of Service
+          with Terms of Service.
         </p>
 
         <motion.button
