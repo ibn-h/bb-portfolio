@@ -96,11 +96,6 @@ export const Contact = () => {
           ></textarea>
         </div>
 
-        <p className="max-w-150 text-sm">
-          Upwork visitors: Please contact me via the Upwork platform to comply
-          with Terms of Service.
-        </p>
-
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
