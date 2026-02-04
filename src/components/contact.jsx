@@ -49,8 +49,8 @@ export const Contact = () => {
         >
           Are you looking for a dedicated Web Developer or Designer for your
           next project? I am currently available for freelance opportunities. I
-          am based in Antwerp UTC+2. I am highly responsive and can adapt to
-          your timeline to ensure a smooth collaboration.
+          am highly responsive and can adapt to your timeline to ensure a smooth
+          collaboration.
         </motion.p>
       </div>
 
