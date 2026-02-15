@@ -1,35 +1,31 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { itemVariants } from "../utils/motion";
 
 import bronzePlanetImg from "../assets/bronze-planet.png";
-import snakeGameImg from "../assets/snake-game.png";
 import podiaImg from "../assets/podia.png";
+import shortlyPreview from "../assets/previewShortly.jpg";
 
 const projectsData = [
   {
-    id: 1,
-    link: "https://snake-game-ygmm.onrender.com/",
-    image: snakeGameImg,
-    title: "Snake Game",
+    link: "https://ibn-h.github.io/url-shortening-api-master/",
+    image: shortlyPreview,
+    title: "Shortly",
     Description:
-      "A mini-project completed in just 3 days. I integrated Supabase for real-time database management.",
+      "Built with a mobile-first workflow, this responsive landing page features a fully functional URL-shortening API integration. The project leverages React for a dynamic user interface and TailwindCSS for streamlined, modern styling, while Git was utilized throughout the development process for efficient version control.",
   },
   {
-    id: 2,
     link: "https://violet-goal-407157.framer.app/",
     image: bronzePlanetImg,
     title: "Bronze Planet",
     Description:
-      "This project served as a playground for my web design skills. I prioritized responsive architecture.",
+      "As part of my ongoing journey to sharpen my web design skills, I created a fully responsive conceptual website using Framer. This self-initiated project allowed me to explore the entire design-to-development pipeline from start to finish.",
   },
   {
-    id: 3,
     link: "https://entire-words-752427.framer.app/",
     image: podiaImg,
-    title: "Podia (Frontend Practice)",
+    title: "Podia",
     Description:
-      "Using Framer, I focused on high-fidelity details. This project features unique hover effects.",
+      "A landing page made using Framer. I focused on implementing every single detail from the typography to the hover effects. In addition, every section is made responsive ensuring it's accessible for each screen size.",
   },
 ];
 
@@ -39,7 +35,7 @@ const Projects = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Time between each project card appearing
+        staggerChildren: 0.2,
       },
     },
   };
@@ -70,9 +66,9 @@ const Projects = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-          {projectsData.map(({ id, link, image, title, Description }) => (
+          {projectsData.map(({ link, image, title, Description }, key) => (
             <motion.article
-              key={id}
+              key={key}
               variants={cardVariants}
               className="flex flex-col gap-4 sm:gap-6"
             >
