@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { itemVariants } from "../utils/motion";
 
-import bronzePlanetImg from "../assets/bronze-planet.png";
-import podiaImg from "../assets/podia.png";
+import bronzePlanetImg from "../assets/bronze-planet-fireshot.png";
+import podiaImg from "../assets/podia-fireshot.png";
 import shortlyPreview from "../assets/previewShortly.jpg";
 
 const projectsData = [
@@ -65,7 +65,7 @@ const Projects = () => {
           Projects
         </motion.h2>
 
-        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
           {projectsData.map(({ link, image, title, Description }, key) => (
             <motion.article
               key={key}
