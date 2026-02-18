@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "../utils/motion";
-import webdevImage from "../assets/web-dev.jpg";
+import WebDevelopmentImage from "../assets/web-dev.jpg";
 
 const About = () => {
   return (
@@ -34,7 +34,7 @@ const About = () => {
         variants={itemVariants}
         className="h-auto w-full rounded-lg object-cover"
         alt="About Me Illustration"
-        src={webdevImage}
+        src={WebDevelopmentImage}
       />
     </motion.section>
   );
