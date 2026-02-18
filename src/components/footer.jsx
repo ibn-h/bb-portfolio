@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="bg-secondary flex w-full flex-col items-start gap-2 px-6 py-6 text-left sm:flex-row sm:items-center sm:justify-between sm:px-8 md:px-16">
       <p className="w-fit text-base">
-        © 2025 Badr Belarbi. All Rights Reserved.
+        © {new Date().getFullYear()} Badr Belarbi. All Rights Reserved.
       </p>
 
       <Link

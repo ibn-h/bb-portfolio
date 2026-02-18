@@ -1,15 +1,15 @@
-import { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useHashScroll from "../hooks/useHashScroll";
+import scrollToTop from "../hooks/scrollToTop";
 
 const navigationItems = [
-  { label: "Home", href: "/" },
   { label: "Projects", href: "#/#projects" },
   { label: "About", href: "#/#about" },
 ];
 
 const Header = () => {
   useHashScroll();
+  scrollToTop();
 
   const linkStyles =
     "hover:opacity-70 transition-opacity font-normal text-sm sm:text-base text-text";
@@ -24,6 +24,10 @@ const Header = () => {
         className="flex items-center gap-3 sm:gap-6"
         aria-label="Main navigation"
       >
+        <Link to="/" className={linkStyles}>
+          Home
+        </Link>
+
         {navigationItems.map((item) => (
           <a key={item.href} href={item.href} className={linkStyles}>
             {item.label}
